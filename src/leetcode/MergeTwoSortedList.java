@@ -16,6 +16,28 @@ public class MergeTwoSortedList {
 			}
 		}
 	}
+	//another way which is easy to understand without recursion.
+	private ListNode mergeTwo(ListNode head1, ListNode head2) {
+        ListNode dummy = new ListNode(0);
+        ListNode p = dummy;
+        while (head1 != null && head2 != null) {
+            if (head1.val < head2.val) {
+                p.next = head1;
+                head1 = head1.next;
+                p = p.next;
+            } else {
+                p.next = head2;
+                head2 = head2.next;
+                p = p.next;
+            }
+        }
+        if (head1 == null) {
+            p.next = head2;
+        } else {
+            p.next = head1;
+        }
+        return dummy.next;
+    }
 	public static void main(String args[]){
 		ListNode l1=new ListNode(1);
 		ListNode l2=new ListNode(2);

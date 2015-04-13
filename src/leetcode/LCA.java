@@ -6,6 +6,9 @@ public class LCA {
 		else{
 		
 		TreeNode left=LCAMethod(root.left,p,q);
+		//there didn't use root.left=LCAMethod(root.left,p,q) and if we use this method,
+		//it will be a bottom up trace for constructing a tree;
+		// with getting a new node, we can easily compare;
 		//System.out.println("HI 1 ");
 		TreeNode right=LCAMethod(root.right,p,q);
 		//System.out.println("HI 2");
