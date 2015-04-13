@@ -53,6 +53,7 @@ public class MergeTwoSortedList {
 		l2.insert(10);
 		l2.insert(12);
 		MergeTwoSortedList test=new MergeTwoSortedList();
+		test.mergeTwo(l1,l2).printNode();
 		test.mergeTwoLists(l1, l2).printNode();
 		return;
 	}
