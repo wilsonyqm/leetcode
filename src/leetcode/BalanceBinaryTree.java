@@ -11,6 +11,14 @@ public class BalanceBinaryTree {
 		if(left==-1||right==-1||Math.abs(left-right)>1) return -1;
 		return Math.max(left, right)+1;
 	}
+	//if consider not only binary tree 
+//	This suppose to be
+//	if(root==null) return 0;
+//	int valid=0;
+//	for(child in root){
+//		valid=isValid(valid,helper(child))
+//	}
+//	
 	//insert is used for tests;
 	//recursion call is better;
 	public void insert(TreeNode parent,TreeNode root,int l_or_r,int element){

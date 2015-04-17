@@ -12,4 +12,11 @@ public class MaxDepthOfBT {
 		max=helper(node.right,k+1,max);
 		return max;
 	}
+	//what if it is not binary tree, but tree with a lot of branches
+	private int helperwithMultipleNodes(TreeNode tree){
+		int deepest=0;
+		//for (child of root node)
+			//deepest=Math.max(deepest, helperwithMultipleNodes(child));
+		return deepest+1;
+	}
 }

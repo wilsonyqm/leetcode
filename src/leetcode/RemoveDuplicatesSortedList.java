@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.*;
+
 public class RemoveDuplicatesSortedList {//second question
 	public ListNode deleteDuplicates(ListNode head) {
 		//needs three pointer: prev,first,curr.
@@ -43,4 +45,5 @@ public class RemoveDuplicatesSortedList {//second question
 		System.out.println(root.val);
 		return;
 	}
+
 }

@@ -34,11 +34,12 @@ public class CombinationSum {
 			res.add(new ArrayList<Integer>(temp));
 		}
 		else if(sum>target || j>=candidates.length) return;
-		int prev=-1;
+		int prev=-1;//DP method to remove the duplicates;[1,1] 1 case, the duplicate 1 is not allowed.
 		for(int i=j;i<candidates.length;i++){
 			if(prev==candidates[i]) continue;
 			temp.add(candidates[i]);
-			helper2(candidates,target,res,temp,sum+candidates[i],i+1);// i+1 here is better to modify j->j+1, since it consider the base case;
+			helper2(candidates,target,res,temp,sum+candidates[i],i+1);
+			// i+1 here is better to modify j->j+1, since it consider the base case;
 			prev=candidates[i];
 			temp.remove(temp.size()-1);
 		}

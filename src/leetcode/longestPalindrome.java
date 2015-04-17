@@ -27,6 +27,8 @@ public class longestPalindrome {
         }
         return s.substring(i+1, j);
 	}
+	//if not return the string ,just return whether is true or false for a word
+	//, then u can go from left and right separately; 
 	public static void main(String args[]){
 		longestPalindrome test= new longestPalindrome();
 		String s="abb";
