@@ -13,7 +13,7 @@ public class LevelOrderBottomUp {
 		queue.offer(root);
 		while(!queue.isEmpty()){
 			List<Integer> level=new LinkedList<Integer>();
-			int size=queue.size();
+			int size=queue.size();//this is important for determining the size,this size the number of children
 			for(int i=0;i<size;i++){
 				TreeNode newnode= queue.poll();
 				level.add(newnode.val);
