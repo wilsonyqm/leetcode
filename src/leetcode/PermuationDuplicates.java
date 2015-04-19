@@ -22,7 +22,7 @@ public class PermuationDuplicates {
 		for(int i=0;i<num.length;i++){
 			//cannot skip the duplicates and do the recursion, for example, cannot start from the second duplicates and do permuation
 			//which will generate duplicate permutation
-			if(visited[i]==1 || (i>0 && num[i]==num[i-1] && visited[i-1]==0)) continue;
+			if(visited[i]==1 || (i>0 && num[i]==num[i-1] && visited[i-1]==0)) continue;//1 2 2 u cannot scan the second 2 first.
 			visited[i]=1;
 			temp.add(num[i]);
 			helper(res,temp,visited,num);
