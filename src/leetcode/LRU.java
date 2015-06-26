@@ -28,7 +28,7 @@ public class LRU {
 			node.next.prev=node.prev;
 		}
 		node.prev=null;
-		node.next=null;
+		node.next=null;//deal with node separately
 	}
 	public void sethead(DoubleLinkedList node){
 		if(head!=null) head.prev=node;

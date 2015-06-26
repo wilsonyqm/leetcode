@@ -29,7 +29,7 @@ public class RotateList {
 		root.insert(4);
 		root.insert(5);
 		
-		test.rotateRight(root, 5).printNode();
+		test.rotateRight(root, 3).printNode();
 		
 	}
 }

@@ -12,7 +12,7 @@ public class MergeInterval {
                 intervals.get(i).end=Math.max(intervals.get(i).end,intervals.get(i+1).end);
                 intervals.remove(i+1);
             }
-            else i++;
+            else i++;//if modified, don't need to i++
         }
         return intervals;
     }

@@ -18,7 +18,7 @@ public class ValidParenthesis {
     }
 	public static void main(String args[]){
 		ValidParenthesis test=new ValidParenthesis();
-		String s="[(]){[]}";
+		String s="[()]{[]}";
 		System.out.println(test.isValid(s));
 	}
 }

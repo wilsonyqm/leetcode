@@ -13,10 +13,10 @@ public class RemoveDuplicatesSortedList {//second question
 		ListNode prev=first;
 		ListNode curr=head;
 		while(curr!=null){
-			while(curr.next!=null && prev.next.val==curr.next.val){
+			while(curr.next!=null && curr.val==curr.next.val){
 				curr=curr.next;
 			}
-			if(curr==prev.next)
+			if(curr==prev.next)//{1 1 2 2} this should return null, and prev cannot change arbitrarily. if no skip then, sign prev.
 				prev=curr;//this is for keeping the connections// no disconnection, but just move pointer
 			else
 				prev.next=curr.next;//this is for disconnecting the connections by changing next and not move pointer

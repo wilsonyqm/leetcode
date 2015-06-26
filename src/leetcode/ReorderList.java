@@ -16,7 +16,7 @@ public class ReorderList {
 	    	ListNode temp=dummy;
 	    	int index=0;
 	    	while(head1!=null && head2!=null){
-	    		if(index%2==0){
+	    		if(index%2==0){//this has been revised.
 	    			temp.next=head1;
 	    			head1=head1.next;
 	    		}
@@ -37,8 +37,8 @@ public class ReorderList {
 	    	if(head==null || head.next==null) return head;
 	    	
 	    	ListNode prev=new ListNode(0);
-	    	prev=head;
-	    	head=head.next;
+	    	prev=head;//we has to set like this with head!=null OR just prev =null is fine;
+	    	head=head.next;//has to move head one ahead
 	    	prev.next=null;//this is necessary or it will a infinite loop// if pre=new null we don't need this
 	    	while(head!=null){
 	    		ListNode temp=head.next;

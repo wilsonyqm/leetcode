@@ -1,7 +1,8 @@
 package leetcode;
 import java.util.*;
 public class WordBreak1 {
-//	Given a string s and a dictionary of words dict, determine if s can be segmented into a space-separated sequence of one or more dictionary words.
+//	Given a string s and a dictionary of words dict, 
+	//determine if s can be segmented into a space-separated sequence of one or more dictionary words.
 //
 //	For example, given
 //	s = "leetcode",
@@ -31,7 +32,7 @@ public class WordBreak1 {
 		boolean[] status=new boolean[s.length()+1];//has to include a initial state
 		status[0]=true;
 		for(int i=1;i<=s.length();i++){//start with 1 and end with len
-			for(int j=0;j<s.length();j++){
+			for(int j=0;j<i;j++){
 				if(status[j] && dict.contains(s.substring(j, i))){
 					status[i]=true;//set i to be true, then break to continue word break
 					break;
